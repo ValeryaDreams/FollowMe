@@ -1,4 +1,4 @@
-namespace FollowMeAPI
+namespace FollowMeAPI.Models
 {
     public class WeatherForecast
     {
