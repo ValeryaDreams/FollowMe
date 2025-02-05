@@ -22,25 +22,26 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
-          "options": {
-            "outputPath": "dist/follow-me-ui",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
-            "tsConfig": "tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
-          },
+            "options": {
+                //"outputPath": "dist/follow-me-ui",
+                "outputPath": "../FollowMeAPI/wwwroot",
+                "index": "src/index.html",
+                "browser": "src/main.ts",
+                "polyfills": [
+                    "zone.js"
+                ],
+                "tsConfig": "tsconfig.app.json",
+                "assets": [
+                    {
+                        "glob": "**/*",
+                        "input": "public"
+                    }
+                ],
+                "styles": [
+                    "src/styles.css"
+                ],
+                "scripts": []
+            },
           "configurations": {
             "production": {
               "budgets": [
@@ -55,7 +56,7 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "none"
             },
             "development": {
               "optimization": false,
@@ -106,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f62867e5-66dd-4458-ad70-a8ace465c2e4"
   }
 }

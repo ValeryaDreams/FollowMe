@@ -10,6 +10,27 @@ namespace FollowMeAPI
                 {
                         var builder = WebApplication.CreateBuilder(args);
 
+                        // CORS Policy
+                        builder.Services.AddCors(options =>
+                        {
+                                options.AddPolicy("MyPolicy",
+                                    policy =>
+                                    {
+                                            policy.WithOrigins("http://localhost:62197")
+                                                .AllowAnyHeader()
+                                                .AllowAnyMethod();
+                                    });
+
+                                options.AddPolicy("AnotherPolicy",
+                                    policy =>
+                                    {
+                                            policy.WithOrigins("http://www.contoso.com")
+                                                .AllowAnyHeader()
+                                                .AllowAnyMethod();
+                                    });
+                        });
+
+
                         // Add services to the container.
 
                         builder.Services.AddControllers(); 
@@ -32,8 +53,9 @@ namespace FollowMeAPI
 
                         app.UseHttpsRedirection();
 
+                        app.UseCors();
+                       
                         app.UseAuthorization();
-
 
                         app.MapControllers();
 
