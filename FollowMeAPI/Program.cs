@@ -16,7 +16,7 @@ namespace FollowMeAPI
                                 options.AddPolicy("MyPolicy",
                                     policy =>
                                     {
-                                            policy.WithOrigins("http://localhost:62197")
+                                            policy.WithOrigins("https://followme-app-build.onrender.com/")
                                                 .AllowAnyHeader()
                                                 .AllowAnyMethod();
                                     });
