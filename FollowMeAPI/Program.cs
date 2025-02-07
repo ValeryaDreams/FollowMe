@@ -53,7 +53,7 @@ namespace FollowMeAPI
 
                         app.UseHttpsRedirection();
 
-                        app.UseCors();
+                        app.UseCors("MyPolicy");
                        
                         app.UseAuthorization();
 
