@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.example-card {
+	margin-bottom: 2vw;
+}
+
+.example-header-image {
+	background-image: url('/Kraken.jpg');
+	background-size: cover;
+}
+.news_main {
+	width: 50vw;
+	height: 33vh;
+}
+
+.main_page_title_news {
+	max-width: 100%;
+	display: flex;
+}
+
+.news_left, news_right{
+	width: 25vw;
+}
+
+.main_title {
+	text-align: center;
+	font-family: "Shantell Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
+	font-size: 40px;
+}
+
+mat-card-actions {
+	justify-content: flex-end;
+}
+
+button:hover {
+	cursor: none;
+}
+

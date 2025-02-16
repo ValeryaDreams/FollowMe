@@ -7,7 +7,11 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from '../users/users.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
+//import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -17,7 +21,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   imports: [
       BrowserModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      MatCardModule,
+      MatButtonModule,
+      MatIconModule
   ],
   providers: [
     provideAnimationsAsync()
