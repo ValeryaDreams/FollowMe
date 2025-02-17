@@ -35,8 +35,3 @@
 mat-card-actions {
 	justify-content: flex-end;
 }
-
-button:hover {
-	cursor: none;
-}
-
