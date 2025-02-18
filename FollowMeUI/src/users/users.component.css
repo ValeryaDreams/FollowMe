@@ -8,18 +8,10 @@
 	background-image: url('/Kraken.jpg');
 	background-size: cover;
 }
-.news_main {
-	width: 50vw;
-	height: 33vh;
-}
-
-.main_page_title_news {
-	max-width: 100%;
+.main_page{
+	width: 100vw;
 	display: flex;
-}
-
-.news_left, news_right{
-	width: 25vw;
+	flex-direction: column;
 }
 
 .main_title {
@@ -30,8 +22,23 @@
 	font-style: normal;
 	font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
 	font-size: 40px;
+	margin-bottom: 3vh;
 }
 
-mat-card-actions {
+.list_news {
+	display: flex;
+}
+
+.news_left, news_right {
+	width: 25vw;
+}
+
+.news_main {
+	width: 50vw;
+}
+
+mat-card-actions{
 	justify-content: flex-end;
 }
+
+
