@@ -13,6 +13,13 @@ namespace FollowMeAPI.Data
                 {
                         Database.EnsureCreated();
                 }
+
+                protected override void OnModelCreating(ModelBuilder modelBuilder)
+                {
+                        modelBuilder.Entity<Post>()
+                                .Property(x => x.Date)
+                                .HasDefaultValue("getdate()");
+                }
         }
 }
 
