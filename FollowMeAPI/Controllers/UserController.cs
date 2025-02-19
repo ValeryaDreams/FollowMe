@@ -22,7 +22,7 @@ namespace FollowMeAPI.Controllers
                 [Route("GetAll")]
                 public async Task<ActionResult<IEnumerable<User>>> GetAllUsers()
                 {
-                        return Ok(await _context.User.ToListAsync());
+                        return Ok(await _context.Users.ToListAsync());
                 }
 
         }
