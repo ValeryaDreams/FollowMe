@@ -18,7 +18,7 @@ namespace FollowMeAPI.Data
                 {
                         modelBuilder.Entity<Post>()
                                 .Property(x => x.Date)
-                                .HasDefaultValue("getdate()");
+                                .HasDefaultValueSql("getdate()");
                 }
         }
 }
