@@ -20,14 +20,6 @@ namespace FollowMeAPI
                                                 .AllowAnyHeader()
                                                 .AllowAnyMethod();
                                     });
-
-                                options.AddPolicy("AnotherPolicy",
-                                    policy =>
-                                    {
-                                            policy.WithOrigins("http://www.contoso.com")
-                                                .AllowAnyHeader()
-                                                .AllowAnyMethod();
-                                    });
                         });
 
 
