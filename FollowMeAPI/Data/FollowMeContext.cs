@@ -1,4 +1,4 @@
-﻿using FollowMeAPI.Models;
+﻿using FollowMeAPI.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace FollowMeAPI.Data
