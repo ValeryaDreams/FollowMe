@@ -26,7 +26,7 @@ namespace FollowMeAPI.Controllers
                         return Ok(await _context.Posts.ToListAsync());
                 }
 
-                [HttpGet("{id}")]
+                [HttpGet("{id}")]               
                 public async Task<ActionResult<IEnumerable<Post>>> PostById(Guid id)
                 {
                         var post = await _context.Posts.FirstOrDefaultAsync(p=> p.Id == id);
@@ -55,7 +55,7 @@ namespace FollowMeAPI.Controllers
                         return Ok(post);
                 }
 
-                [HttpPut("{id}")]
+                [HttpPut("{id}")]          
                 public void UpdatePost(int id, [FromBody] string value)
                 {
 
