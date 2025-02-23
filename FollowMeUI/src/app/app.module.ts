@@ -1,28 +1,40 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from '../users/users.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { PostsComponent } from '../posts/posts.component';
+import { NewPostComponent } from '../newpost/newpost.component';
 
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
         AppComponent,
-        UsersComponent
+        UsersComponent,
+        PostsComponent,
+        NewPostComponent
   ],
   imports: [
       BrowserModule,
-      AppRoutingModule,
-      HttpClientModule,
+      AppRoutingModule,      
+      MatIconModule,
       MatCardModule,
+      ReactiveFormsModule,
       MatButtonModule,
-      MatIconModule
+      MatInputModule,
+      HttpClientModule,
+
   ],
   providers: [
     provideAnimationsAsync()

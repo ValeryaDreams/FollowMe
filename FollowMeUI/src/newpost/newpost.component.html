@@ -1,0 +1,51 @@
+<div class="main_page">
+	<div class="main_page_title">
+		<h1 class="main_title">New Post</h1>
+	</div>
+
+	<div class="list_news">
+
+		<div class="news_left"> </div>
+
+		<div class="news_main">
+
+			<form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="myForm">
+				<mat-card>
+					<mat-card-content>
+						<div class="myInputs">
+
+							<mat-form-field>
+								<mat-label>Write something...</mat-label>
+								<textarea matInput formControlName="text"></textarea>
+							</mat-form-field>
+
+						</div>
+					</mat-card-content>
+
+				</mat-card>
+				<div class="myButtons">
+
+					<button class="actionButtons" (click)="onCancel()" type="button" mat-raised-button color="warn">
+						Cancel
+					</button>
+
+					<button class="actionButtons" [disabled]="postForm.invalid" type="submit" mat-raised-button color="primary">
+						Create
+					</button>
+				</div>
+
+			</form>
+		</div>
+
+		<div class="news_right"> </div>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+

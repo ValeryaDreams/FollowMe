@@ -1,33 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-* {
-	cursor: none;
-}
-
-html, body { height: 100vh; }
-body {
-	font-family: Roboto, "Helvetica Neue", sans-serif;
-	background-image: url("/BG_cats.png");
-	margin: 0 auto;
-}
-
-app-root {
-	display: block;
-	min-height: 90vh;
-	min-width: 95vw;
-}
-
-.cat-paw-cursor {
-	width: 40px;
-	height: 40px;
-	background-image: url('/paw.png');
-	background-size: cover;
-	position: fixed;
-	pointer-events: none;
-	z-index: 1000;
-}
-
-mat-card {
+.example-card {
 	margin-bottom: 2vw;
 }
 
@@ -37,7 +10,7 @@ mat-card {
 }
 
 .main_page {
-	max-width: 100vw;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 }
@@ -57,7 +30,7 @@ mat-card {
 	display: flex;
 }
 
-.news_left, .news_right {
+.news_left, news_right {
 	width: 25vw;
 }
 
@@ -68,4 +41,3 @@ mat-card {
 mat-card-actions {
 	justify-content: flex-end;
 }
-

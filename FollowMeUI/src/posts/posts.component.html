@@ -1,0 +1,48 @@
+<div class="main_page">
+	<div class="main_page_title">
+		<h1 class="main_title">Posts</h1>
+	</div>
+
+	<div class="list_news">
+
+		<div class="news_left"> </div>
+
+		<div class="news_main">
+			<ng-container *ngFor="let post of posts">
+				<mat-card appearance="outlined">
+					<mat-card-header>
+						<div mat-card-avatar class="example-header-image"></div>
+						<mat-card-title>{{post.id}}</mat-card-title>
+						<mat-card-subtitle>{{post.date}}</mat-card-subtitle>
+					</mat-card-header>
+
+					<mat-card-content>
+						<p>
+							{{post.text}}
+						</p>
+					</mat-card-content>
+
+					<mat-card-actions>
+						<button mat-mini-fab>
+							<mat-icon fontIcon="pets"></mat-icon>
+						</button>
+					</mat-card-actions>
+
+				</mat-card>
+			</ng-container>
+		</div>
+
+		<div class="news_right"> </div>
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+textarea {
+	resize: none;	
+	box-sizing: border-box;
+}
+
+.myInputs {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+
+.myButtons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.myButtons button {
+	margin-left: 2vw;
+}

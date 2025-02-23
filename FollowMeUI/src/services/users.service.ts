@@ -11,7 +11,7 @@ export class UsersService {
 	constructor(private http: HttpClient) { }
 
 	getUsers() {
-		return this.http.get<User>('https://followkraken.somee.com/user/getall');
+		return this.http.get<User>('https://followkraken.somee.com/Users/GetAllUsers');
 	}
 
 }

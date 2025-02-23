@@ -17,7 +17,6 @@ export class UsersComponent implements OnInit {
         this.usersService.getUsers().subscribe({
             next: (data) => {
                 this.users = data;
-                //console.log(this.users);
             },
             error: (err) => {
                 console.log(err);
@@ -27,4 +26,5 @@ export class UsersComponent implements OnInit {
             }
         });
     }
+
 }
