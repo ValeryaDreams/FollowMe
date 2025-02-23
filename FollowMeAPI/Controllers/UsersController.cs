@@ -32,7 +32,7 @@ namespace FollowMeAPI.Controllers
                 {
                         var user = new User
                         {
-                                Id = Guid.NewGuid(),
+                                Id = request.Id,
                                 Name = request.Name,
                                 Login = request.Login,
                                 Password = request.Password

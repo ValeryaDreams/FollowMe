@@ -27,7 +27,7 @@ namespace FollowMeAPI.Controllers
                 }
 
                 [HttpGet("{id}")]               
-                public async Task<ActionResult<IEnumerable<Post>>> PostById(Guid id)
+                public async Task<ActionResult<IEnumerable<Post>>> PostById(int id)
                 {
                         var post = await _context.Posts.FirstOrDefaultAsync(p=> p.Id == id);
                         if (post == null)
@@ -43,7 +43,7 @@ namespace FollowMeAPI.Controllers
                 {
                         var post = new Post
                         {
-                                Id = Guid.NewGuid(),
+                                Id = request.Id,
                                 Date = request.Date,
                                 Text = request.Text,
                                 isGroup = request.isGroup
@@ -62,7 +62,7 @@ namespace FollowMeAPI.Controllers
                 }
 
                 [HttpDelete("{id}")]
-                public async Task<ActionResult<IEnumerable<Post>>> DeletePost(Guid id)
+                public async Task<ActionResult<IEnumerable<Post>>> DeletePost(int id)
                 {
                         var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id);
                         if (post == null)

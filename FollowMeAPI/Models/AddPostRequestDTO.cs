@@ -14,7 +14,6 @@ namespace FollowMeAPI.Models
 
                 public string? Text { get; set; }
 
-                [DefaultValue(false)]
                 public bool isGroup { get; set; }
 
                 public User? User { get; set; }
