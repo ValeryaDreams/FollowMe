@@ -69,3 +69,11 @@ mat-card-actions {
 	justify-content: flex-end;
 }
 
+.btn_main {
+	text-align: center;
+}
+
+.btn_text {
+	font-size: 20px;
+	margin-bottom: 5vw;	
+}
