@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { PostsService } from '../services/posts.service';
 import { UsersService } from '../services/users.service';
 
-
 @Component({
     selector: 'posts',
     templateUrl: './posts.component.html',
-    styleUrl: './posts.component.css',
+    styleUrls: ['./posts.component.css'], 
     standalone: false
 })
 export class PostsComponent implements OnInit {

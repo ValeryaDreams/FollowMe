@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from '../home/home.component';
@@ -18,20 +18,23 @@ import { PostsComponent } from '../posts/posts.component';
 import { NewPostComponent } from '../newpost/newpost.component';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { LoginComponent } from '../login/login.component';
 
 @NgModule({
   declarations: [
         AppComponent,
+        LoginComponent,
         HomeComponent,
         UsersComponent,
         PostsComponent,
         NewPostComponent
   ],
   imports: [
-      BrowserModule,
+      BrowserModule,      
       AppRoutingModule,      
       MatIconModule,
       MatCardModule,
+      FormsModule,
       ReactiveFormsModule,
       MatButtonModule,
       MatInputModule,

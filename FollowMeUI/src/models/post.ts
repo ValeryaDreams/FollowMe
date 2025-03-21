@@ -3,5 +3,5 @@ export interface Post {
 	date: Date,
 	text: string,
 	isGroup: boolean,
-	userid: number
+	userId: number
 }

@@ -1,0 +1,60 @@
+﻿<div class="main_page">
+	<div class="main_page_title">
+		<h1 class="main_title">Follow Me</h1>
+	</div>
+
+	<div class="list_news">
+
+		<div class="news_left"> </div>
+
+		<div class="news_main">
+
+			<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="myForm">
+				<mat-card>
+					<mat-card-content>
+						<div class="myInputs">
+
+							<mat-form-field appearance="fill">
+								<mat-label>Login</mat-label>
+								<input formControlName="login" matInput placeholder="Enter your login">
+								<mat-icon matSuffix>pets</mat-icon>
+							</mat-form-field>
+
+
+							<mat-form-field>
+								<mat-label>Enter your password</mat-label>
+								<input formControlName="password" matInput [type]="hide() ? 'password' : 'text'" />
+								<button mat-icon-button
+										matSuffix
+										(click)="clickEvent($event)"
+										[attr.aria-label]="'Hide password'"
+										[attr.aria-pressed]="hide()">
+									<mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+								</button>
+							</mat-form-field>
+
+							<button class="enterButton" type="submit" mat-raised-button color="warn">
+								Log in
+							</button>
+						</div>						
+					</mat-card-content>
+
+				</mat-card>
+				
+
+			</form>
+		</div>
+
+		<div class="news_right"> </div>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
