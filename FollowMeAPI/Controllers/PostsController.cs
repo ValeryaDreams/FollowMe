@@ -39,21 +39,36 @@ namespace FollowMeAPI.Controllers
 
                 [HttpPost]
                 [Route("CreatePost")]
-                public async Task<ActionResult<IEnumerable<Post>>> CreatePost([FromBody] AddPostRequestDTO request)
+                public async Task<ActionResult<Post>> CreatePost([FromBody] AddPostRequestDTO request)
                 {
+                        // Проверяем, указан ли UserId
+                        if (request.UserId.HasValue)
+                        {
+                                // Проверяем, существует ли пользователь с таким UserId
+                                var user = await _context.Users.FindAsync(request.UserId.Value);
+                                if (user == null)
+                                {
+                                        return NotFound($"Пользователь с ID {request.UserId} не найден.");
+                                }
+                        }
+
+                        // Создаем объект Post
                         var post = new Post
                         {
-                                Id = request.Id,
                                 Date = request.Date,
                                 Text = request.Text,
-                                isGroup = request.isGroup
+                                isGroup = request.isGroup,
+                                UserId = request.UserId // Устанавливаем связь с пользователем, если указан UserId
                         };
 
+                        // Добавляем пост в базу данных
                         _context.Posts.Add(post);
                         await _context.SaveChangesAsync();
 
                         return Ok(post);
                 }
+
+
 
                 [HttpPut("{id}")]          
                 public void UpdatePost(int id, [FromBody] string value)

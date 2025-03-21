@@ -17,13 +17,20 @@ namespace FollowMeAPI.Data
                 protected override void OnModelCreating(ModelBuilder modelBuilder)
                 {
                         modelBuilder.Entity<Post>()
+                                .HasOne(p => p.User)
+                                .WithMany()
+                                .HasForeignKey(p => p.UserId)
+                                .OnDelete(DeleteBehavior.SetNull);
+
+                        modelBuilder.Entity<Post>()
                                 .Property(x => x.Date)
                                 .HasDefaultValueSql("getdate()");
                         modelBuilder.Entity<Post>()
                                 .Property(x => x.isGroup)
                                 .HasDefaultValueSql("0");
+
+                       
                 }
         }
 }
-
 

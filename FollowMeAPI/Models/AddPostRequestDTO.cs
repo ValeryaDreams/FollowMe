@@ -6,8 +6,6 @@ namespace FollowMeAPI.Models
 {
         public class AddPostRequestDTO
         {
-                public int Id { get; set; }
-
                 [DataType(DataType.DateTime)]
                 [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm:ss}", ApplyFormatInEditMode = true)]
                 public DateTime Date { get; set; }
@@ -16,6 +14,6 @@ namespace FollowMeAPI.Models
 
                 public bool isGroup { get; set; }
 
-                public User? User { get; set; }
+                public int? UserId { get; set; }
         }
 }

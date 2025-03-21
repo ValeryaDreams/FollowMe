@@ -15,6 +15,7 @@ namespace FollowMeAPI.Models.Domain
 
                 public bool isGroup { get; set; }
 
+                public int? UserId { get; set; }
                 public User? User { get; set; }
         }
 }
