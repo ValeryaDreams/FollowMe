@@ -11,11 +11,11 @@ export class PostsService {
 	constructor(private http: HttpClient) { }
 
 	getAllPosts() {
-		return this.http.get<Post>('https://localhost:7244/Posts/GetAllPosts');
+		return this.http.get<Post>('http://followkraken.somee.com/Posts/GetAllPosts');
 	}
 
 	createPost(newPost: Post) {
-		return this.http.post<Post>('https://localhost:7244/Posts/CreatePost', newPost)
+		return this.http.post<Post>('http://followkraken.somee.com/Posts/CreatePost', newPost)
 	}
 
 }
