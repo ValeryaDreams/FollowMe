@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     }
 
     onSubmit() {
-        this.http.post('https://localhost:7244/api/Auth/login', this.loginForm.value)
+        this.http.post('https://followkraken.somee.com/api/Auth/login', this.loginForm.value)
             .subscribe(response => {
                 if (response) {
                     this.authGuard.login(response); // передать информацию о пользователе
